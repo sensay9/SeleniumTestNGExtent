@@ -37,16 +37,20 @@
             <version>5.0.9</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.10.1</version>
-        </dependency>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <!-- Configure plugin settings if needed -->
+                </configuration>
+            </plugin>
+            <!-- Other plugins may be listed here -->
+        </plugins>
+    </build>
 
-
-
-    </dependencies>
 
 </project>
