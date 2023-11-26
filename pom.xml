@@ -37,6 +37,16 @@
             <version>5.0.9</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven-plugin -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-maven-plugin</artifactId>
+            <version>1.18.20.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
     </dependencies>
     <build>
         <plugins>
@@ -48,7 +58,22 @@
                     <!-- Configure plugin settings if needed -->
                 </configuration>
             </plugin>
-            <!-- Other plugins may be listed here -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>14</source>
+                    <target>14</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok-version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
