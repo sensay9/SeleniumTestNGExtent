@@ -59,6 +59,7 @@ public class SeleniumTest {
     @AfterSuite
     public static void cleanup(){
         extent.flush();
+        driver.close();
     }
 
 
